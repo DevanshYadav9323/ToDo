@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Play', sans-serif;
+}
+
+.App-wrapper {
+  background-color: transparent;
+  color: white;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #414040;
+  margin: 1% 0 0 0;
+  font-weight: 800;
+}
+
+
+.todo-wrapper {
+  background-color: #353434;
+  padding: 2%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 16px;
+
+  /* Glass css */
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.todo-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(77, 77, 77);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+
+}
+
+.todo-input-item {
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.todo-input-item label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.todo-input-item input {
+  border: none;
+  padding: 8px;
+  width: 250px;
+  border-radius: 8px;
+
+  color: #FAF9F6;
+  background-color: #353434;
+}
+
+.todo-input-item input:focus {
+  outline: 2px solid #FAF9F6;
+}
+
+.primary-btn {
+  background-color: #ADAE89;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  margin-top: 25px;
+  padding: 10px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #D3BB86;
+}
+
+.btn-area {
+  margin-bottom: 10px;
+}
+
+
+.secondaryBtn {
+  background-color: rgb(92, 92, 92);
+  color: white;
+  border: none;
+  padding: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.btn-area .active {
+  background-color: #ADAE89;
+}
+
+#secondaryBtn1 {
+  border-radius: 8px 0 0 8px;
+  padding-left: 15px;
+}
+
+#secondaryBtn2 {
+  border-radius: 0 8px 8px 0;
+  padding-right: 15px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  margin: 4% 0 0 0;
+}
+
+.todo-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #414040;
+  padding: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 4px rgb(39, 38, 38);
+}
+
+.todo-list-item h3 {
+  font-size: 25px;
+  color: rgb(0, 230, 122);
+  font-weight: bold;
+  margin: 0px;
+}
+
+.todo-list-item p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgb(179, 178, 178);
+
+}
+
+.icon {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: red;
+
+}
+
+.check-icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: rgb(0, 230, 122);
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.check-icon:hover {
+  color: rgb(4, 192, 104);
+}
+
+#priority-dropdown {
+  position: relative;
+  margin-right: 25px;
+}
+
+#priority-dropdown label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: block;
+}
+
+#priority-dropdown select {
+  padding: 8px;
+  width: 250px;
+  border-radius: 8px;
+  color: #FAF9F6;
+  background-color: #353434;
+  cursor: pointer;
+}
+
+#priority-dropdown select:focus {
+  outline: 2px solid #FAF9F6;
+}
+
+/* Media Query for tablets and mobile devices */
+@media only screen and (max-width: 768px) {
+  .todo-wrapper {
+    width: 90%;
+    /* Adjusted width for smaller screens */
+  }
+
+  .todo-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .todo-input-item {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .todo-input-item input {
+    width: 95%;
+  }
+
+  .primary-btn {
+    width: 100%;
+  }
+
+  .btn-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .secondaryBtn {
+    width: 100%;
+  }
+
+  #secondaryBtn1 {
+    border-radius: 8px 8px 0 0px;
+    padding-left: 15px;
+  }
+
+  #secondaryBtn2 {
+    border-radius: 0 0px 8px 8px;
+    padding-right: 15px;
+  }
+
+  .todo-list-item {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+}
