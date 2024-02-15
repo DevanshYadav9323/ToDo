@@ -7,7 +7,7 @@ function Footer() {
             <footer>
                 <div class="footer">
                     <div class="row">
-                        <a href="#"><i class="fa fa-code"></i></a>
+                        <a href={'//www.github.com/DevanshYadav9323/ToDo'} target="_blank"><i class="fa fa-code"></i></a>
                         <a href={'//www.github.com/DevanshYadav9323'} target="_blank"><i class="fa fa-github"></i></a>
                         <a href={'//www.linkedin.com/in/devanshyadav9323'} target="_blank"><i class="fa fa-linkedin"></i></a>
                         <a href={'mailto:devanshyadav9323@gmail.com'} target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope-o"></i></a>
@@ -16,7 +16,7 @@ function Footer() {
 
                     <div class="row">
                         <ul>
-                            <li><a href="#">Source Code</a></li>
+                            <li><a href={'//www.github.com/DevanshYadav9323/ToDo'} target="_blank">Source Code</a></li>
                             <li><a href={'//www.github.com/DevanshYadav9323'} target="_blank">Github</a></li>
                             <li><a href={'//www.linkedin.com/in/devanshyadav9323'} target="_blank">Linkedin</a></li>
                             <li><a href={'mailto:devanshyadav9323@gmail.com'} target="_blank" rel="noopener noreferrer">Email</a></li>
