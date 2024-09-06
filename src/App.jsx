@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import ReactGA from "react-ga4";
 import { AiOutlineDelete } from 'react-icons/ai';
 import { BsCheckLg } from 'react-icons/bs';
 import Footer from "./Footer";
 import './App.css';
 
-
+const TRACKING_ID = "G-8PB166BMPY";
 
 function App() {
+
+  useEffect(() => {
+    ReactGA.initialize(TRACKING_ID);
+    ReactGA.send("pageview"); // Track initial page load
+  }, []);
+
   const [priority, setPriority] = useState(''); // Add this line
   const [allTodos, setAllTodos] = useState([]);
   const [newTodoTitle, setNewTodoTitle] = useState('');
